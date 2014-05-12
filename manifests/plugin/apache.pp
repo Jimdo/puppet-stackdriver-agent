@@ -57,7 +57,7 @@ class stackdriver::plugin::apache(
   #contain "${name}::install"
 
   #class { "::${name}::config": require => Class["::${name}::install"] }
-  contain "${name}::config"
+  include "${name}::config"
 
 }
 

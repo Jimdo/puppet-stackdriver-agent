@@ -51,17 +51,17 @@ class stackdriver (
     ensure => $ensure,
     notify => Class[$sclass],
   }
-  contain $iclass
+  include $iclass
 
 
   # OS Family specific configuration
   class { "::${cclass}": require => Class[$iclass]; }
-  contain $cclass
+  include $cclass
 
 
   # Service
   class { "::${sclass}": require => Class[$cclass]; }
-  contain $sclass
+  include $sclass
 
 
   # Array of Plugins to load (optional)
