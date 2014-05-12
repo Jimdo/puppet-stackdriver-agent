@@ -16,7 +16,7 @@
 #
 class stackdriver::config::debian(
 
-  $sysconfig = '/etc/default/stackdriver-agent',
+  $sysconfig = '/etc/default/stackdriver',
 
 ) inherits stackdriver {
 
